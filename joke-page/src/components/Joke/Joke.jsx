@@ -1,15 +1,13 @@
-import style from '../Joke/Joke.module.scss';
+import React from 'react';
+import styles from './Joke.module.scss'; 
 
+const Joke = ({ joke }) => {
+  return (
+    <div className={styles.joke}>
+      <h2>{joke.setup}</h2>
+      <p>{joke.punchline}</p>
+    </div>
+  );
+};
 
-function Joke() {
- 
-
-    return (
-      <>  
-      <h1>Joke app with API</h1>
-      </>
-    )
-  }
-  
-  export default Joke
-
+export default Joke;
